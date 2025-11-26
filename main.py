@@ -1,7 +1,20 @@
 from fastapi import FastAPI, HTTPException
+from fastapi.middleware.cors import CORSMiddleware
 from pydantic import BaseModel
 
 app = FastAPI()
+
+origins = [
+    "http://localhost:3000",  # frontend URL
+]
+
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=origins,
+    allow_credentials=True,
+    allow_methods=["*"],
+    allow_headers=["*"],
+)
 
 # In-memory dictionary for users
 # In a real application, this would be a database
@@ -20,9 +33,9 @@ class TransferRequest(BaseModel):
     receiver_name: str
     amount: float
 
-@app.get("/")
-async def root():
-    return {"message": "Hello World"}
+# @app.get("/")
+# async def root():
+#     return {"message": "Hello World"}
 
 @app.post("/authenticate")
 async def authenticate_user(request: AuthRequest):
