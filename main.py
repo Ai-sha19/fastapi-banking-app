@@ -19,9 +19,9 @@ app.add_middleware(
 # In-memory dictionary for users
 # In a real application, this would be a database
 users_db = {
-    "alice": {"pin_number": "1234", "bank_balance": 50000},
-    "bob": {"pin_number": "5678", "bank_balance": 20000},
-    "charlie": {"pin_number": "1111", "bank_balance": 15000},
+    "ali": {"pin_number": "1234", "bank_balance": 50000},
+    "ahmed": {"pin_number": "5678", "bank_balance": 20000},
+    "saad": {"pin_number": "1111", "bank_balance": 15000},
 }
 
 class AuthRequest(BaseModel):
