@@ -84,7 +84,7 @@ export default function Home() {
   };
 
   return (
-  <div className="min-h-screen w-full bg-gradient-to-b from-gray-900 to-gray-700 text-white flex flex-col">
+  <div className="w-full flex flex-col flex-grow">
     <header className="w-full text-center py-6 px-6">
       <h1 className="text-4xl md:text-6xl font-bold text-green-600">Al-Baraka Bank</h1>
       <p className="text-white text-base md:text-lg mt-2">Where Trust Meets Prosperity.</p>
