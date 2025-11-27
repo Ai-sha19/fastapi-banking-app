@@ -4,9 +4,7 @@ from pydantic import BaseModel
 
 app = FastAPI()
 
-origins = [
-    "http://localhost:3000",  # frontend URL
-]
+origins = ["*"]
 
 app.add_middleware(
     CORSMiddleware,
